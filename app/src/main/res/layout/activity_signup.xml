@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".ui.login.LoginActivity">
+    tools:context=".SignupActivity">
 
     <TextView
         android:id="@+id/tvLogin"
@@ -18,7 +18,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="105dp"
         android:fontFamily="@font/baloo_chettan"
-        android:text="Log in"
+        android:text="Register"
         android:textColor="@android:color/black"
         android:textSize="65sp" />
 
@@ -48,14 +48,14 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/border"
         android:hint="@string/prompt_password"
-        android:imeActionLabel="@string/action_sign_in"
+        android:imeActionLabel="@string/action_register"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:selectAllOnFocus="true" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignup"
         android:layout_width="333dp"
         android:layout_height="60dp"
         android:layout_below="@+id/etPassword"
@@ -65,9 +65,9 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/round_button"
-        android:text="@string/action_sign_in"
+        android:text="@string/action_register"
         android:textColor="@android:color/white"
-        tools:text="LOG IN" />
+        tools:text="REGISTER" />
 
     <ProgressBar
         android:id="@+id/loading"
