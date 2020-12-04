@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="105dp"
+        android:fontFamily="@font/baloo_chettan"
+        android:text="Register"
+        android:textColor="@android:color/black"
+        android:textSize="65sp" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/tvLogin"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:hint="@string/prompt_username"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:selectAllOnFocus="true" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="333dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/etUsername"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/action_register"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:selectAllOnFocus="true" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="333dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/round_button"
+        android:text="@string/action_register"
+        android:textColor="@android:color/white"
+        tools:text="REGISTER" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</RelativeLayout>

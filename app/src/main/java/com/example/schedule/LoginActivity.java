@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    private ImageButton btnBackarrow;
     private Button btnSignup;
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -39,24 +41,12 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        btnSignup = findViewById(R.id.btnSignup);
-        
-        /*btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnBackarrow = findViewById(R.id.btnBackarrow);
+
+        btnBackarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(TAG, "OnClick signup button");
-                String username = etUsername.getText().toString();
-                String password = etPassword.getText().toString();
-                signUp(username, password);
-            }
-        });*/
-        btnSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.i(TAG, "onClick sign up button");
-                goToSignupActivity();
-
-
+                goToFront();
             }
         });
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -64,10 +54,19 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(TAG, "onClick login button");
                 String username = etUsername.getText().toString();
+                Log.i(TAG, "Username: " + username);
                 String password = etPassword.getText().toString();
+                Log.i(TAG, "Password: " + password);
+
                 loginUser(username, password);
             }
         });
+    }
+
+    private void goToFront() {
+        Intent i = new Intent(this, FrontActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void goToSignupActivity() {
@@ -75,29 +74,6 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(i);
         finish();
     }
-
-    /*private void signUp(String username, String password) {
-        Log.i(TAG, "Attempting to sign user up"+username);
-        ParseUser user = new ParseUser();
-        user.setUsername(username);
-        user.setPassword(password);
-
-        user.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e != null) {
-                   Log.e(TAG,"issue with sign up", e);
-                   return;
-                }
-
-                Log.i(TAG, "Successful Sign Up!");
-                goMainActivity();
-                Toast.makeText(LoginActivity.this, "Successful Sign Up!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-    }*/
 
     private void loginUser(String username, String password) {
         Log.i(TAG, "Attempting to login user" + username);
