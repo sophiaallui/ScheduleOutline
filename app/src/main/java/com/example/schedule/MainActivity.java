@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +14,14 @@ import com.parse.ParseUser;
 
 public class MainActivity  extends AppCompatActivity {
 
+    private TextView username;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
+
+        username = findViewById(R.id.username);
+
+
     }
 
         public boolean onCreateOptionsMenu(Menu menu) {
