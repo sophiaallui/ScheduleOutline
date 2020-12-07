@@ -39,6 +39,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1' // for logging API calls to LogCat
 
     implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+    implementation 'commons-io:commons-io:2.6'
+
 
 
 
