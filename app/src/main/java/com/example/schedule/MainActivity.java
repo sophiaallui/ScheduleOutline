@@ -29,7 +29,6 @@ import java.util.List;
 
 public class MainActivity  extends AppCompatActivity {
 
-    public static final String KEY_ITEM_TEXT = ;
     private TextView username;
     private Button btnAdd;
     private EditText addItem;
@@ -65,8 +64,8 @@ public class MainActivity  extends AppCompatActivity {
             }
         };
 
-       TasksAdapter.OnClickListener onClickListener = new TasksAdapter.OnClickListener(){
-           @Override
+        TasksAdapter.OnClickListener onClickListener = new TasksAdapter.OnClickListener(){
+            @Override
             public void onItemClicked(int position) {
                 // Open up activity
                 Log.d("MainActivity", "Single click at position" + position);
