@@ -2,7 +2,6 @@ package com.example.schedule;
 
 import android.content.Intent;
 import android.os.Bundle;
-//import android.os.FileUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,8 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.apache.commons.io.FileUtils;
-
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,11 +18,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.parse.ParseUser;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
+
+//import android.os.FileUtils;
 
 public class MainActivity  extends AppCompatActivity {
 
@@ -45,10 +46,10 @@ public class MainActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
 
-        username = findViewById(R.id.username);
+        //username = findViewById(R.id.username);
         btnAdd = findViewById(R.id.btnAdd);
-        addItem = findViewById(R.id.addItem);
-        taskList = findViewById(R.id.itemList);
+        addItem = findViewById(R.id.etTask);
+        taskList = findViewById(R.id.rvItems);
 
         loadItems();
         TasksAdapter.OnLongClickListener onLongClickListener = new TasksAdapter.OnLongClickListener(){
