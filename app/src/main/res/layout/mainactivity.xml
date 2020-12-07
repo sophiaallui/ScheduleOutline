@@ -1,39 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="112dp"
-        android:layout_height="74dp"
-        android:fontFamily="@font/baloo_chettan"
-        android:text="Tasks"
-        android:textSize="50sp"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="33dp" />
-
-    <TextView
-        android:id="@+id/welcome"
+    <Button
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo_chettan"
-        android:text="welcome"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="121dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/round_button"
+        android:text="Add"
+        android:textColor="#FFFFFF" />
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="67dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/baloo_chettan"
-        android:textColor="@android:color/holo_green_dark"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toEndOf="@+id/welcome"
-        tools:layout_editor_absoluteY="122dp"
-        tools:text="New User" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/etTask"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/btnAdd"
+        android:ems="10"
+        android:hint="Add a task here!" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/etTask"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp" />
+
+
+</RelativeLayout>
