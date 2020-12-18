@@ -23,6 +23,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
         void onItemLongClicked(int position);
     }
     List<String> items;
+    String frag;
     OnLongClickListener longClickListener;
     OnClickListener onClickListener;
 
